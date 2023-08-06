@@ -13,5 +13,8 @@ sudo swapon /swapfile
 sudo cp /etc/fstab /etc/fstab.bak
 echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 sudo sysctl vm.swappiness=10
-echo '' >> /etc/sysctl.conf
-echo 'vm.swappiness=10' >> /etc/sysctl.conf
+sudo chmod 646 /etc/sysctl.conf
+sudo echo '' >> /etc/sysctl.conf
+sudo echo 'vm.swappiness=10' >> /etc/sysctl.conf
+sudo chmod 644 /etc/sysctl.conf
+bash nfs.sh
