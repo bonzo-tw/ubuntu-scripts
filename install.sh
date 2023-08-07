@@ -1,5 +1,5 @@
 #! /bin/bash
-mkdir venv github
+conda config --set auto_activate_base false
 sudo apt-get update
 yes | sudo apt-get install python3.9
 sudo apt install software-properties-common -y
